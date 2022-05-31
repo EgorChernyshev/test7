@@ -1,0 +1,67 @@
+let courses = [
+	{name:"Courses in England", min: 0,   max: 100}, 
+	{name:"Courses in Germany", min: 500,  max: null}, 
+	{name:"Courses in Italy", min: 100,  max: 200}, 
+	{name:"Courses in Russia", min: null,  max: 400}, 
+	{name:"Courses in China", min: 50,  max: 250}, 
+	{name:"Courses in USA", min: 200,  max: null},
+    {name:"Courses in Kazakhstan", min:56, max: 324},
+    {name: "Courses in France", min: null, max:null},
+]
+
+
+
+
+let requiredRange1 = [null, 200];
+let overlap1 = [];
+
+for(i = 0; i < courses.length; i++)
+{
+	let A = courses[i].min;
+	let B = courses[i].max;
+	
+	if(requiredRange1[0] <= B && requiredRange1[1] >= A)
+	{
+		overlap1.push( courses[i] );
+	}
+}
+console.log(overlap1);
+
+
+
+let requiredRange2 = [100, 350];
+let overlap2 = [];
+
+for(i = 0; i < courses.length; i++)
+{
+	let A = courses[i].min;
+	let B = courses[i].max;
+	
+	if(requiredRange2[0] <= B && requiredRange2[1] >= A)
+	{
+		overlap2.push( courses[i] );
+	}
+}
+console.log(overlap2);
+
+
+let requiredRange3 = [200, null];
+let overlap3 = [];
+
+for(i = 0; i < courses.length; i++)
+{
+	let A = courses[i].min;
+	let B = courses[i].max;
+	
+	if(requiredRange3[0] <= B && requiredRange3[1] >= A)
+	{
+		overlap3.push( courses[i] );
+	}
+}
+console.log(overlap3);
+
+
+
+
+
+
